@@ -1,10 +1,36 @@
+// button이 필요할 시,
+// const loginForm = document.querySelector('#login-form');
+// const loginInput = loginForm.querySelector('input');
+// const loginButton = loginForm.querySelector('button');
+
+// function loginButtonClick(){
+//    const username = loginInput.value; 
+//    if(username === ''){
+//     alert('plese write your name')
+//    }
+//    else if(username.length > 15){
+//     alert('your name is too long')
+//    }
+// }
+
+// loginButton.addEventListener('click',loginButtonClick)
+
 // submit 새로고침 현상 문제 해결
 const loginForm = document.querySelector('#login-form');
 const loginInput = loginForm.querySelector('input');
 const greeting = document.querySelector('#greeting')
 
 const HIDDEN_CLASSNAME = 'hidden';
-const USERNAME_KEY = 'username'
+const USERNAME_KEY = 'username';
+const logOut = document.querySelector('.logout');
+
+function Logout(){
+    localStorage.removeItem(USERNAME_KEY);
+    localStorage.removeItem('toDos');
+    window.location.reload();
+}
+
+logOut.addEventListener('click',Logout)
 
 // input 입력된 user name 구하기
 function onLoginSubmit(event){
@@ -13,14 +39,15 @@ function onLoginSubmit(event){
     // local storage user name 저장
     localStorage.setItem(USERNAME_KEY, username) //setItem === local storage에 정보를 저장 'username' === 저장된 아이템의 이름, username === 변수 
     loginForm.classList.add(HIDDEN_CLASSNAME);
-    console.log(username);
+    logOut.classList.remove(HIDDEN_CLASSNAME);
+    console.log(logOut);
     paintGreetings(username);
 }
 
 function paintGreetings(username){
     // greeting.innerText = 'Hello ' + username; //두번째 규칙
     greeting.classList.remove(HIDDEN_CLASSNAME);//``백틱 기호 사용 string과 변수를 합쳐서 사용하는 첫번째 규칙
-    greeting.innerText = `Hello ${username}`; // 
+    greeting.innerText = `${username}`; // 
 }
 
 
@@ -30,6 +57,7 @@ console.log(saveUsername)
 
 if(saveUsername === null){
     loginForm.classList.remove(HIDDEN_CLASSNAME)
+    logOut.classList.add(HIDDEN_CLASSNAME);
     loginForm.addEventListener('submit',onLoginSubmit)//show the form
 }
 else {

@@ -1,0 +1,317 @@
+@font-face {
+    font-family: 'korail';
+    font-style: normal;
+    font-weight: bold;
+    src: url(/font/korail.ttf) format('opentype');
+}
+
+:root {
+    /* font */
+    --font-size-lg: max(7rem, min(1.3vw, 3rem));
+    --font-size-mlg: max(3rem, min(1vw, 2rem));
+    --font-size-lmd: max(1.125rem, min(0.93vw, 0.93rem));
+    --font-size-sm: max(0.9rem, min(0.7292vw, 0.875rem));
+    --font-size-ssm: max(0.85rem, min(0.7vw, 0.85rem));
+    /* weight */
+    --font-bold: bold;
+    /* percent */
+
+    /* deg */
+    --deg-180: 180deg;
+    --deg-160: 160deg;
+    /* transform */
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+legend,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: 400;
+    border: 0 none;
+    color:#fff;
+    background: transparent;
+    text-decoration: none;
+    text-align: left;
+}
+
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: 400;
+    border: 0 none;
+    background: transparent;
+    /* text-decoration: none; */
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+* {
+    border: 0;
+    border-style: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'korail',sans-serif;
+    line-height: 1.25em;
+    color: #fff;
+    min-width: 1920px;
+    margin: 0 auto;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 1px;
+    font-size: 1em;
+}
+
+img {
+    border: 0 none;
+}
+
+img.ui-datepicker-trigger {
+    width: 0;
+    height: 0;
+    margin-left: -5px;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+small {
+    font-size: smaller;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    border: 0 none !important;
+}
+
+input[type="button"] {
+    border: 0 none;
+    cursor: pointer;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="date"],
+input[type="password"],
+textarea {
+    height: 30px;
+    background-color: #fff;
+    line-height: 30px;
+    /*ime-mode:active;*/
+}
+
+input::placeholder{
+    color:#fff;
+}
+
+/*korean first*/
+fieldset,
+legend {
+    border: 0;
+}
+
+hr {
+    display: none;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+
+ul,
+li,
+ol,
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+button,
+select,
+textarea,
+input {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    font-weight: 400;
+    line-height: 1.25em;
+    vertical-align: middle;
+}
+
+button {
+    cursor: pointer;
+    background: transparent;
+}
+
+.clearfix {
+    /*overflow:auto;*/
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+textarea {
+    border-radius: 5px;
+}
+
+mark {
+    font-weight: 700;
+}
+
+input {
+    padding: 0 5px;
+    border-radius: 5px;
+    background: transparent;
+}
+
+a:link,
+a:visited {
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    color: inherit;
+    letter-spacing: inherit;
+}
+
+a:hover,
+a:active {
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    color: inherit;
+    letter-spacing: inherit;
+}
+
+.noview,
+legend {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+}
+
+caption {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+}
+
+.clear {
+    clear: both;
+}
+
+input:focus {
+    border-color: #356eff;
+    background-color: #f2f6ff;
+}
+
+body *[readonly],
+body *[readonly="readonly"] {
+    background-color: #ecf5f7;
+}
+
+body *[readonly]:hover,
+body *[readonly="readonly"]:hover {
+    border-color: #a6b4b7;
+    background-color: #ecf5f7;
+}
+
+.hidden{
+    display: none !important;
+}
+.block{
+    display: block;
+    background: url(/images/bg01.jpeg);
+}
+.bg01{
+    background:linear-gradient()
+}

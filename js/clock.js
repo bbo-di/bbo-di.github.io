@@ -1,56 +1,19 @@
-const quotes = [
-    {
-        quote:'인생에 뜻을 세우는데 적당한 때는 없다.',
-        author:'볼드윈'
-    },
-    {
-        quote:'실패는 잊어라. 하지만 그것이 준 교훈은 절대 잊으면 안된다.',
-        author:'하버트 개서'
-    },
-    {
-        quote:'일단 시작해라. 나중에 완벽해지면 된다.',
-        author:'기시미 이치로'
-    },
-    {
-        quote:'인격은 그 사람의 운명이다.',
-        author:'론 무어'
-    },
-    {
-        quote:'모든 사람들로부터 사랑받지 않아도 된다.',
-        author:'니체'
-    },
-    {
-        quote:'꿈을 꾸기에 인생이 빛난다.',
-        author:'모차르트'
-    },
-    {
-        quote:'이 세상에서 자기 자신보다 사랑스러운 것은 없다.',
-        author:'상용부경전'
-    },
-    {
-        quote:'오랫동안 꿈을 그리는 사람은 마침내 그 꿈을 닮아간다.',
-        author:'앙드레 말로'
-    },
-    {
-        quote:'To love someone, you have to love yourself first. - Beauty and the Beast',
-        author:'미녀와 야수'
-    },
-    {
-        quote:'We must be our own before we can be another’s. – Ralph Waldo Emerson',
-        author:'랄프 왈도 에머슨'
-    },
-]
-//Math.random() 0에서 1사이의 랜덤 숫자
-//floor(), round() 내림.
-//ceil() 반올림
+const clock = document.querySelector('#clock');
 
-function Quotes(){
-    const quote = document.querySelector('#quote span:first-child');
-    const author = document.querySelector('#quote span:last-child');
-    const todayQuote = quotes[Math.floor(Math.random()*quotes.length)]
-    quote.innerHTML = todayQuote.quote;
-    author.innerHTML = todayQuote.author;
+// Inteval 매번 일어나야하는 무언가를 의미
+// setInteval 각 호출 사이에 고정된 시간 지연으로 함수를 반복적으로 호출하거나 코드 스니펫(코드조각)을 실행
+function getClock(){
+    const date = new Date();
+    const getHours = String(date.getHours()).padStart(2,'0'); //String으로 감싸는 이유는 number로 출력되는 값을 string으로 출력되게 변환하여 한자리 문자를 두자리로 바꾸기 위한 방법.
+    const getMinutes = String(date.getMinutes()).padStart(2,'0');
+    const getSeconds = String(date.getSeconds()).padStart(2,'0');
+
+    clock.innerText = `${getHours}:${getMinutes}:${getSeconds}`;
 }
+getClock()
+setInterval(getClock, 1000)//두번째 argument는 호출되는 function 간격을 몇 ms할지 작성
 
-Quotes()
-setInterval(Quotes, 5000)
+// setTimeout(sayHello, 5000) //타이머가 만료되면 함수를 실행하는 타이머를 설정
+// padStart === string의 길이를 구해서 앞쪽에 string을 추가
+// padEnd === string의 길이를 구해서 뒤쪽에 string을 추가
+// 다른방법으로는 clock.innerText = new Date().toLocaleTimeString("en-US", { hour12: false });

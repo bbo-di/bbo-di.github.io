@@ -12,4 +12,3 @@ const bgImg = document.createElement('img');
 
 body.style.backgroundImage = "url("+`/images/${chosenlmage}`+")"
 
-document.body.appendChild(); //body맨앞에 위치 prepend() === body 마지막에 위치
