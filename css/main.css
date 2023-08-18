@@ -83,7 +83,7 @@ body {
 
 }
 
-.greeting{
+#greeting{
     font-size: var(--font-size-mlg);
     font-weight: var(--font-bold);
     line-height: 100px;
