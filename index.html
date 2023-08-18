@@ -1,0 +1,35 @@
+<!DOCTYPE html> <!-- getting user -> saving user -> loading user -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>momentum</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script defer src="js/greetings.js"></script>
+        <script defer src="js/clock.js"></script>
+        <script defer src="js/quotes.js"></script>
+        <script defer src="js/background.js"></script>
+        <script defer src="js/todo.js"></script>
+        <script defer src="js/weather.js"></script>
+    </head>
+    <body>
+        <form id="login-form" class="hidden">
+            <input jeoung
+            required
+            maxlength="15"
+            type="text" 
+            placeholder="what is your name?" > <!--Input의 유효성 검사를 작동시키기 위해 form내에 있어야함-->
+            <input type="submit"> <!--Input안에 있는 button을 누르거나 type이 submit인 input을 클릭하면 enter를 눌러도 자동으로 submit(제출) 새로고침되는 현상 막아야함 -->
+        </form>
+        <form action="" method="post" id="todo-form">
+            <input type="text" placeholder="write a To Do and Press Enter" required>
+        </form>
+        <ul id="todo-list"></ul>
+        <h1 id="greeting" class="hidden"></h1>
+        <h2 id="clock">00:00:00</h2>
+        <div id="quote">
+            <span></span>
+            <span></span>
+        </div>
+    </body>
+</html>
