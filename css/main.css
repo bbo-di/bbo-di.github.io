@@ -78,11 +78,6 @@ body {
     }
 }
 
-
-.container{
-
-}
-
 #greeting{
     font-size: var(--font-size-mlg);
     font-weight: var(--font-bold);
