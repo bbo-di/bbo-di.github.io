@@ -1,5 +1,6 @@
 const googlesearch = document.querySelector('#search-form');
 const input = googlesearch.querySelector('.search-input');
+const search_btn = googlesearch.querySelector('button');
 console.log(googlesearch)
 function Search (event){
     event.preventDefault();
@@ -8,3 +9,4 @@ function Search (event){
 }
 
 googlesearch.addEventListener('submit', Search)
+search_btn.addEventListener('click', Search)

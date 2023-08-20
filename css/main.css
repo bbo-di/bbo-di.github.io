@@ -41,6 +41,15 @@ body {
     background: transparent;
     font-size: var(--font-size-lmd);
     color: #fff;
+    flex: 1;
+}
+
+#search-form .search-box button{
+    background:url(/images/search.svg)no-repeat;
+    background-size:cover;
+    width:35px;
+    height:35px;
+    text-indent: -9999px;
 }
 
 #weather{
@@ -162,14 +171,13 @@ body {
 }
 
 .input_required{
-    background: rgba(255,255,255, 0.5);
     padding:20px 30px;
-    border-radius: 10px;
     width:500px;
     display: flex;
     align-items: center;
     justify-content:space-between;
     height: 140px;
+    border-bottom: 1px solid #fff;
 }
 
 .input_required input{
@@ -187,13 +195,14 @@ body {
 }
 
 .input_required input[type=submit]{
-    background: #5d48d6;
+    background: #000;
     padding:10px 25px;
     font-size:var(--font-size-lmd);
     cursor: pointer;
     flex: 0 0 30%;
-    height: 100px;
+    height: 70px;
     font-family: 'korail',sans-serif;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .input_required input[type=submit]:hover{
@@ -243,6 +252,7 @@ end;
     padding:20px;
     cursor: pointer;
     transition: all ease-out .2s;
+    background-blend-mode: luminosity;
 }
 
 .list-icon:hover{
